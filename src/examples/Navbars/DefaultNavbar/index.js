@@ -20,7 +20,8 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DateRangePicker } from "@mui/x-date-pickers-pro/DateRangePicker";
 import dayjs from "dayjs";
 import MenuItem from "@mui/material/MenuItem";
-import Select from "@mui/material/Select";
+import Select from '@mui/material/Select';
+import InputLabel from '@mui/material/InputLabel';
 
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
@@ -31,6 +32,7 @@ import DefaultNavbarMobile from "examples/Navbars/DefaultNavbar/DefaultNavbarMob
 
 import breakpoints from "assets/theme/base/breakpoints";
 import MKInput from "components/MKInput";
+import { FormControl, OutlinedInput, useTheme } from "@mui/material";
 
 function DefaultNavbar({
   routes,
@@ -41,6 +43,8 @@ function DefaultNavbar({
   relative,
   center,
 }) {
+  const theme = useTheme();
+
   const [dropdown, setDropdown] = useState("");
   const [dropdownEl, setDropdownEl] = useState("");
   const [dropdownName, setDropdownName] = useState("");
@@ -51,10 +55,26 @@ function DefaultNavbar({
   const [mobileNavbar, setMobileNavbar] = useState(false);
   const [mobileView, setMobileView] = useState(false);
   const [date, setDate] = useState([dayjs(new Date()), dayjs(new Date())]);
-  const [selectedInput, setSelectedInput] = useState("");
+  const [selectedInput, setSelectedInput] = useState(1);
   const [searchInput2, setSearchInput2] = useState("");
 
   const openMobileNavbar = () => setMobileNavbar(!mobileNavbar);
+  const ITEM_HEIGHT = 48;
+const ITEM_PADDING_TOP = 8;
+const MenuProps = {
+  PaperProps: {
+    style: {
+      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+      width: 250,
+    },
+  },
+};
+
+function getStyles(theme) {
+  return {
+    fontWeight: theme.typography.fontWeightMedium
+  };
+}
 
   useEffect(() => {
     // A function that sets the display state for the DefaultNavbarMobile.
@@ -502,22 +522,25 @@ function DefaultNavbar({
           backdropFilter: transparent ? "none" : `saturate(200%) blur(30px)`,
         })}
       >
+        
         <MKBox
           display="flex"
           justifyContent="space-between"
           alignItems="center"
         >
+          <FormControl sx={{ m: 1, minWidth: 120 }}>
+          <InputLabel id="demo-name-label" className="select-input">Select</InputLabel>
           <Select
-            labelId="elect-label"
-            id="select"
-            placeholder="Select Item"
+            labelId="demo-name-label"
+            className="select-opt"
             value={selectedInput}
-            label="Select Item"
             onChange={(event) => setSelectedInput(event.target.value)}
+            MenuProps={MenuProps}
           >
-            <MenuItem value={1}>Item 1</MenuItem>
-            <MenuItem value={2}>Item 2</MenuItem>
+            <MenuItem value={1} style={getStyles(theme)}>Item 1</MenuItem>
+            <MenuItem value={2} style={getStyles(theme)}>Item 2</MenuItem>
           </Select>
+          </FormControl>
           <MKBox
             component={Link}
             to="/"

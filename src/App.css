@@ -3,3 +3,12 @@
     border-radius: 0.2rem;
     margin-right: 10px;
 }
+
+.select-opt {
+    border: 1px solid #1A73E8;
+    margin-top: 8px;
+}
+
+.select-input {
+    margin: -5px;
+}

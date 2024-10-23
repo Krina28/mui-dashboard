@@ -21,6 +21,7 @@ export default function PieAnimation() {
           >
             <div style={{ flex: 1, borderColor: "red", borderWidth: 2 }}>
               <PieChart
+                colors={['#ae71eb', '#6bd3f1','#1A73E8']}
                 height={300}
                 width={600}
                 series={[

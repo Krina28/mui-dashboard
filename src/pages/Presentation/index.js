@@ -22,7 +22,7 @@ import routes from "routes";
 import footerRoutes from "footer.routes";
 
 // Images
-import bgImage from "assets/images/bg-container.jpg";
+import bgImage from "assets/images/bg-health.webp";
 import { useState } from "react";
 import DataTable from "pages/DataTable";
 
