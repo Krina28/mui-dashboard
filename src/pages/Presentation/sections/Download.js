@@ -47,17 +47,14 @@ function Download() {
               UI Kit for ReactJS &amp; MUI?
             </MKTypography>
             <MKTypography variant="body2" color="white" mb={6}>
-              Cause if you do, it can be yours for FREE. Hit the button below to
-              navigate to Creative Tim where you can find the Design System in
-              HTML. Start a new project or give an old Bootstrap project a new
-              look!
+              Material UI Dashboard
             </MKTypography>
             <MKButton
               variant="gradient"
               color="info"
               size="large"
               component="a"
-              href="https://www.creative-tim.com/product/material-kit-react"
+              href="https://mui.com/"
               sx={{ mb: 2 }}
             >
               Download Now
@@ -76,12 +73,12 @@ function Download() {
                 <Tooltip title="Bootstrap 5 - Most popular front-end component library">
                   <MKBox
                     component="a"
-                    href="https://www.creative-tim.com/product/material-kit"
+                    href="https://mui.com/"
                     target="_blank"
                   >
                     <MKBox
                       component="img"
-                      src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/bootstrap5.jpg"
+                      src="https://mui.com/"
                       width="100%"
                     />
                   </MKBox>
@@ -98,7 +95,7 @@ function Download() {
                   >
                     <MKBox
                       component="img"
-                      src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/icon-tailwind.jpg"
+                      src="https://mui.com/"
                       width="100%"
                     />
                   </MKBox>
@@ -115,7 +112,7 @@ function Download() {
                   >
                     <MKBox
                       component="img"
-                      src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/vue.jpg"
+                      src="https://picsum.photos/200/300/?blur"
                       width="100%"
                     />
                   </MKBox>
@@ -132,7 +129,7 @@ function Download() {
                   >
                     <MKBox
                       component="img"
-                      src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/angular.jpg"
+                      src="https://picsum.photos/200/300/?blur"
                       width="100%"
                     />
                   </MKBox>
@@ -142,12 +139,12 @@ function Download() {
                 <Tooltip title="Comming soon">
                   <MKBox
                     component="a"
-                    href="https://www.creative-tim.com/product/material-kit-react"
+                    href="https://mui.com/"
                     target="_blank"
                   >
                     <MKBox
                       component="img"
-                      src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/react.jpg"
+                      src="https://picsum.photos/200/300/?blur"
                       width="100%"
                     />
                   </MKBox>
@@ -164,7 +161,7 @@ function Download() {
                   >
                     <MKBox
                       component="img"
-                      src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/sketch.jpg"
+                      src="https://picsum.photos/200/300/?blur"
                       width="100%"
                     />
                   </MKBox>

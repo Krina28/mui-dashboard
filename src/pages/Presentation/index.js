@@ -1,6 +1,7 @@
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
+import { useState } from "react";
 
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
@@ -11,7 +12,6 @@ import FilledInfoCard from "examples/Cards/InfoCards/FilledInfoCard";
 // Presentation page sections
 import Counters from "pages/Presentation/sections/Counters";
 import Information from "pages/Presentation/sections/Information";
-// import DesignBlocks from "pages/Presentation/sections/DesignBlocks";
 
 // Presentation page components
 import BuiltByDevelopers from "pages/Presentation/components/BuiltByDevelopers";
@@ -23,7 +23,6 @@ import footerRoutes from "footer.routes";
 
 // Images
 import bgImage from "assets/images/bg-health.webp";
-import { useState } from "react";
 import DataTable from "pages/DataTable";
 
 function Presentation() {
@@ -91,7 +90,6 @@ function Presentation() {
       >
         <Counters />
         <Information updateShowTable={() => setShowTable(!showTable)} />
-        {/* <DesignBlocks /> */}
         {showTable && <DataTable />}
         <Container sx={{ mt: 6, flex: 1 }}>
           <Charts />
@@ -112,7 +110,7 @@ function Presentation() {
                 action={{
                   type: "external",
                   route:
-                    "https://www.creative-tim.com/learning-lab/react/overview/material-kit/",
+                    "https://mui.com/",
                   label: "Read more",
                 }}
               />
@@ -126,7 +124,7 @@ function Presentation() {
                 action={{
                   type: "external",
                   route:
-                    "https://www.creative-tim.com/learning-lab/react/overview/datepicker/",
+                    "https://mui.com/",
                   label: "Read more",
                 }}
               />
@@ -140,7 +138,7 @@ function Presentation() {
                 action={{
                   type: "external",
                   route:
-                    "https://www.creative-tim.com/learning-lab/react/alerts/material-kit/",
+                    "https://mui.com/",
                   label: "Read more",
                 }}
               />

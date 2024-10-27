@@ -7,7 +7,7 @@ import MKTypography from "components/MKTypography";
 
 function BuiltByDevelopers() {
   const bgImage =
-    "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/desktop.jpg";
+    "https://picsum.photos/200/300/?blur";
 
   return (
     <MKBox
@@ -42,7 +42,7 @@ function BuiltByDevelopers() {
           </MKTypography>
           <MKTypography
             component="a"
-            href="https://www.creative-tim.com/learning-lab/react/overview/material-kit/"
+            href="https://mui.com/"
             target="_blank"
             rel="noreferrer"
             variant="body2"

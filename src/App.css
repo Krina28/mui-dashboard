@@ -7,6 +7,7 @@
 .select-opt {
     border: 1px solid #1A73E8;
     margin-top: 8px;
+    height: 35px;
 }
 
 .select-input {

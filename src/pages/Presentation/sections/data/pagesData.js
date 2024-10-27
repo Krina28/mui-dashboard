@@ -1,26 +1,12 @@
-const imagesPrefix =
-  "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-design-system/presentation/pages";
-
 export default [
   {
-    image: `${imagesPrefix}/about-us.jpg`,
+    image: `https://picsum.photos/200/300/?blur`,
     name: "About Us Page",
     route: "/pages/landing-pages/about-us",
   },
   {
-    image: `${imagesPrefix}/contact.jpg`,
+    image: `https://picsum.photos/200/300/?blur`,
     name: "Contact Us Page",
     route: "/pages/landing-pages/contact-us",
-  },
-  {
-    image:
-      "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-design-system/presentation/account/signin-basic.jpg",
-    name: "Sign In Page",
-    route: "/pages/authentication/sign-in",
-  },
-  {
-    image: `${imagesPrefix}/author.jpg`,
-    name: "Author Page",
-    route: "/pages/landing-pages/author",
   },
 ];

@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 
 // @mui material components
 import MuiLink from "@mui/material/Link";
+import { Gauge } from '@mui/x-charts/Gauge';
 
 import MKBox from "components/MKBox";
-import MKTypography from "components/MKTypography";
 import MKButton from "components/MKButton";
 
 function RotatingCard({ color, image, title, description, action }) {
@@ -46,18 +46,13 @@ function RotatingCard({ color, image, title, description, action }) {
       }}
     >
       <MKBox pt={12} pb={2} px={2} textAlign="center" lineHeight={1}>
-        <MKTypography variant="h3" color="white" gutterBottom>
-          {title}
-        </MKTypography>
-        <MKTypography variant="body2" color="white" opacity={0.8}>
-          {description}
-        </MKTypography>
+        <Gauge width={100} height={100} value={description} valueMax={description + 100} />
         {action && (
           <MKBox width="50%" mt={4} mb={2} mx="auto">
             {action.type === "external" ? (
               <MKButton
                 component={MuiLink}
-                href={action.route}
+                onClick={action.route}
                 target="_blank"
                 rel="noreferrer"
                 color="white"
@@ -69,7 +64,7 @@ function RotatingCard({ color, image, title, description, action }) {
             ) : (
               <MKButton
                 component={Link}
-                to={action.route}
+                onClick={action.route}
                 color="white"
                 size="small"
                 fullWidth

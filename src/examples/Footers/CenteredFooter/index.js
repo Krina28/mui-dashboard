@@ -95,35 +95,35 @@ function CenteredFooter({ company, links, socials, light }) {
 
 // Setting default values for the props of CenteredFooter
 CenteredFooter.defaultProps = {
-  company: { href: "https://www.creative-tim.com/", name: "Creative Tim" },
+  company: { href: "https://mui.com/", name: "Dashboard" },
   links: [
-    { href: "https://www.creative-tim.com/", name: "Company" },
-    { href: "https://www.creative-tim.com/presentation", name: "About Us" },
-    { href: "https://www.creative-tim.com/presentation", name: "Team" },
-    { href: "https://www.creative-tim.com/templates/react", name: "Products" },
-    { href: "https://www.creative-tim.com/blog", name: "Blog" },
-    { href: "https://www.creative-tim.com/license", name: "License" },
+    { href: "https://mui.com/", name: "Company" },
+    { href: "https://mui.com/", name: "About Us" },
+    { href: "https://mui.com/", name: "Team" },
+    { href: "https://mui.com/", name: "Products" },
+    { href: "https://mui.com/", name: "Blog" },
+    { href: "https://mui.com/", name: "License" },
   ],
   socials: [
     {
       icon: <FacebookIcon fontSize="small" />,
-      link: "https://www.facebook.com/CreativeTim/",
+      link: "https://mui.com/",
     },
     {
       icon: <TwitterIcon fontSize="small" />,
-      link: "https://twitter.com/creativetim",
+      link: "https://mui.com/",
     },
     {
       icon: <InstagramIcon fontSize="small" />,
-      link: "https://www.instagram.com/creativetimofficial/",
+      link: "https://mui.com/",
     },
     {
       icon: <PinterestIcon fontSize="small" />,
-      link: "https://ro.pinterest.com/thecreativetim/",
+      link: "https://mui.com/",
     },
     {
       icon: <GitHubIcon fontSize="small" />,
-      link: "https://github.com/creativetimofficial",
+      link: "https://mui.com/",
     },
   ],
   light: false,

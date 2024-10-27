@@ -14,14 +14,12 @@ import Grow from "@mui/material/Grow";
 import Grid from "@mui/material/Grid";
 import Divider from "@mui/material/Divider";
 import MuiLink from "@mui/material/Link";
-import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { DateRangePicker } from "@mui/x-date-pickers-pro/DateRangePicker";
-import dayjs from "dayjs";
 import MenuItem from "@mui/material/MenuItem";
 import Select from '@mui/material/Select';
 import InputLabel from '@mui/material/InputLabel';
+import { FormControl, useTheme } from "@mui/material";
+import { DateRangePicker } from 'rsuite';
+import 'rsuite/DateRangePicker/styles/index.css';
 
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
@@ -32,7 +30,6 @@ import DefaultNavbarMobile from "examples/Navbars/DefaultNavbar/DefaultNavbarMob
 
 import breakpoints from "assets/theme/base/breakpoints";
 import MKInput from "components/MKInput";
-import { FormControl, OutlinedInput, useTheme } from "@mui/material";
 
 function DefaultNavbar({
   routes,
@@ -54,21 +51,24 @@ function DefaultNavbar({
   const [arrowRef, setArrowRef] = useState(null);
   const [mobileNavbar, setMobileNavbar] = useState(false);
   const [mobileView, setMobileView] = useState(false);
-  const [date, setDate] = useState([dayjs(new Date()), dayjs(new Date())]);
-  const [selectedInput, setSelectedInput] = useState(1);
+  const [date, setDate] = useState([
+    new Date(),
+    new Date()
+  ]);
+  const [selectedInput, setSelectedInput] = useState();
   const [searchInput2, setSearchInput2] = useState("");
 
   const openMobileNavbar = () => setMobileNavbar(!mobileNavbar);
   const ITEM_HEIGHT = 48;
-const ITEM_PADDING_TOP = 8;
-const MenuProps = {
-  PaperProps: {
-    style: {
-      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-      width: 250,
+  const ITEM_PADDING_TOP = 8;
+  const MenuProps = {
+    PaperProps: {
+      style: {
+        maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+        width: 250,
+      },
     },
-  },
-};
+  };
 
 function getStyles(theme) {
   return {
@@ -533,6 +533,7 @@ function getStyles(theme) {
           <Select
             labelId="demo-name-label"
             className="select-opt"
+            placeholder="Select"
             value={selectedInput}
             onChange={(event) => setSelectedInput(event.target.value)}
             MenuProps={MenuProps}
@@ -542,26 +543,16 @@ function getStyles(theme) {
           </Select>
           </FormControl>
           <MKBox
-            component={Link}
-            to="/"
             lineHeight={1}
             py={transparent ? 1.5 : 0.75}
             pl={relative || transparent ? 0 : { xs: 0, lg: 1 }}
             pr={relative || transparent ? 0 : { xs: 0, lg: 1 }}
           >
-            {/* <MKTypography variant="button" fontWeight="bold" color={light ? "white" : "dark"}>
-              {brand}
-            </MKTypography> */}
-            <LocalizationProvider dateAdapter={AdapterDayjs}>
-              <DemoContainer
-                components={["DateRangePicker", "DateRangePicker"]}
-              >
-                <DateRangePicker
-                  value={date}
-                  onChange={(newValue) => setDate(newValue)}
-                />
-              </DemoContainer>
-            </LocalizationProvider>
+            <DateRangePicker
+              placeholder="Select date"
+              value={date}
+              onChange={(newValue) => setDate(newValue)}
+            />
           </MKBox>
           <MKInput
             variant="standard"

@@ -28,7 +28,7 @@ function BaseLayout({ breadcrumb, title, children }) {
           routes={routes}
           action={{
             type: "external",
-            route: "https://www.creative-tim.com/product/material-kit-react",
+            route: "https://mui.com/",
             label: "free download",
             color: "info",
           }}

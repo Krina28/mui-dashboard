@@ -14,16 +14,16 @@ export default {
     {
       name: "company",
       items: [
-        { name: "about us", href: "https://www.creative-tim.com/presentation" },
+        { name: "about us", href: "https://github.com/Krina28/mui-dashboard" },
         {
           name: "freebies",
-          href: "https://www.creative-tim.com/templates/free",
+          href: "https://github.com/Krina28/mui-dashboard",
         },
         {
           name: "premium tools",
-          href: "https://www.creative-tim.com/templates/premium",
+          href: "https://github.com/Krina28/mui-dashboard",
         },
-        { name: "blog", href: "https://www.creative-tim.com/blog" },
+        { name: "blog", href: "https://github.com/Krina28/mui-dashboard" },
       ],
     },
     {
