@@ -17,7 +17,7 @@ function RotatingCard({ color, image, title, description, action }) {
       display="flex"
       justifyContent="center"
       alignItems="center"
-      borderRadius="lg"
+      borderRadius="0.3rem"
       coloredShadow={color}
       position="absolute"
       width="100%"
@@ -45,8 +45,9 @@ function RotatingCard({ color, image, title, description, action }) {
         transform: "rotateY(180deg)",
       }}
     >
-      <MKBox pt={12} pb={2} px={2} textAlign="center" lineHeight={1}>
-        <Gauge width={100} height={100} value={description} valueMax={description + 100} />
+        <div style={{ height: '60px', width: '100px'}}>
+          <Gauge width={100} height={100} value={description} valueMax={description + 100} />
+        </div>
         {action && (
           <MKBox width="50%" mt={4} mb={2} mx="auto">
             {action.type === "external" ? (
@@ -74,7 +75,6 @@ function RotatingCard({ color, image, title, description, action }) {
             )}
           </MKBox>
         )}
-      </MKBox>
     </MKBox>
   );
 }

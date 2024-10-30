@@ -8,6 +8,11 @@ const routes = [
     icon: <Icon>dashboard</Icon>,
     collapse: [
       {
+        name: "advanced search",
+        route: "/",
+        component: <AboutUs />,
+      },
+      {
         name: "about us",
         route: "/pages/landing-pages/about-us",
         component: <AboutUs />,
@@ -18,12 +23,7 @@ const routes = [
         component: <ContactUs />,
       },
     ],
-  },
-  {
-    name: "Contact Us",
-    icon: <Icon>dashboard</Icon>,
-    href: "https://mui.com/material-ui/getting-started/",
-  },
+  }
 ];
 
 export default routes;

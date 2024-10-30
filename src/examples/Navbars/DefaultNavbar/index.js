@@ -17,7 +17,7 @@ import MuiLink from "@mui/material/Link";
 import MenuItem from "@mui/material/MenuItem";
 import Select from '@mui/material/Select';
 import InputLabel from '@mui/material/InputLabel';
-import { FormControl, useTheme } from "@mui/material";
+import { FormControl, TextField, useTheme } from "@mui/material";
 import { DateRangePicker } from 'rsuite';
 import 'rsuite/DateRangePicker/styles/index.css';
 
@@ -30,6 +30,7 @@ import DefaultNavbarMobile from "examples/Navbars/DefaultNavbar/DefaultNavbarMob
 
 import breakpoints from "assets/theme/base/breakpoints";
 import MKInput from "components/MKInput";
+import rgba from "assets/theme/functions/rgba";
 
 function DefaultNavbar({
   routes,
@@ -57,6 +58,8 @@ function DefaultNavbar({
   ]);
   const [selectedInput, setSelectedInput] = useState();
   const [searchInput2, setSearchInput2] = useState("");
+  const [searchInput3, setSearchInput3] = useState("");
+  const [searchInput4, setSearchInput4] = useState("");
 
   const openMobileNavbar = () => setMobileNavbar(!mobileNavbar);
   const ITEM_HEIGHT = 48;
@@ -549,17 +552,40 @@ function getStyles(theme) {
             pr={relative || transparent ? 0 : { xs: 0, lg: 1 }}
           >
             <DateRangePicker
+              className="date-range-picker"
               placeholder="Select date"
               value={date}
               onChange={(newValue) => setDate(newValue)}
             />
           </MKBox>
-          <MKInput
-            variant="standard"
+          <TextField
+            focused
+            size="small"
+            variant="outlined"
             label="Search"
             value={searchInput2}
             InputLabelProps={{ shrink: true }}
             onChange={(event) => setSearchInput2(event.target.value)}
+          />
+          <TextField
+            style={{ marginLeft: '10px' }}
+            focused
+            size="small"
+            variant="outlined"
+            label="Search 2"
+            value={searchInput3}
+            InputLabelProps={{ shrink: true }}
+            onChange={(event) => setSearchInput3(event.target.value)}
+          />
+          <TextField
+            style={{ marginLeft: '10px' }}
+            focused
+            size="small"
+            variant="outlined"
+            label="Search 3"
+            value={searchInput4}
+            InputLabelProps={{ shrink: true }}
+            onChange={(event) => setSearchInput4(event.target.value)}
           />
           <MKBox
             color="inherit"

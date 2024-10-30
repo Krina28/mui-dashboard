@@ -7,14 +7,12 @@ import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import DefaultFooter from "examples/Footers/DefaultFooter";
-import FilledInfoCard from "examples/Cards/InfoCards/FilledInfoCard";
 
 // Presentation page sections
 import Counters from "pages/Presentation/sections/Counters";
 import Information from "pages/Presentation/sections/Information";
 
 // Presentation page components
-import BuiltByDevelopers from "pages/Presentation/components/BuiltByDevelopers";
 import Charts from "pages/Presentation/components/Charts";
 
 // Routes
@@ -90,61 +88,14 @@ function Presentation() {
       >
         <Counters />
         <Information updateShowTable={() => setShowTable(!showTable)} />
-        {showTable && <DataTable />}
-        <Container sx={{ mt: 6, flex: 1 }}>
-          <Charts />
-        </Container>
+        {showTable && 
+        <>
+          <DataTable />
+          <Container sx={{ mt: 6, flex: 1 }}>
+            <Charts />
+          </Container>
+        </>}
 
-        <Container sx={{ mt: 6 }}>
-          <BuiltByDevelopers />
-        </Container>
-        <Container>
-          <Grid container spacing={3}>
-            <Grid item xs={12} lg={4}>
-              <FilledInfoCard
-                variant="gradient"
-                color="info"
-                icon="flag"
-                title="Patient Engagement"
-                description="Patient engagement is the first priority for us."
-                action={{
-                  type: "external",
-                  route:
-                    "https://mui.com/",
-                  label: "Read more",
-                }}
-              />
-            </Grid>
-            <Grid item xs={12} lg={4}>
-              <FilledInfoCard
-                color="info"
-                icon="precision_manufacturing"
-                title="Benefits for Patients"
-                description="Get All the benefits for all of you."
-                action={{
-                  type: "external",
-                  route:
-                    "https://mui.com/",
-                  label: "Read more",
-                }}
-              />
-            </Grid>
-            <Grid item xs={12} lg={4}>
-              <FilledInfoCard
-                color="info"
-                icon="apps"
-                title="Fast and Flex Service"
-                description="We provide very fast and flext service to all our patients."
-                action={{
-                  type: "external",
-                  route:
-                    "https://mui.com/",
-                  label: "Read more",
-                }}
-              />
-            </Grid>
-          </Grid>
-        </Container>
       </Card>
       <MKBox pt={6} px={1} mt={6}>
         <DefaultFooter content={footerRoutes} />

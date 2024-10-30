@@ -1,15 +1,20 @@
 .card-border {
-    border: 0.1rem solid rgb(135, 181, 236);
+    /* border: 0.1rem solid rgb(135, 181, 236); */
     border-radius: 0.2rem;
     margin-right: 10px;
 }
 
 .select-opt {
-    border: 1px solid #1A73E8;
-    margin-top: 8px;
+    border: 2px solid #1A73E8;
     height: 35px;
 }
 
 .select-input {
     margin: -5px;
+}
+
+.date-range-picker input, .rs-input-group, .rs-input-group-inside {
+    border: 2px solid #1A73E8;
+    background: transparent !important;
+    background-color: transparent !important;
 }
