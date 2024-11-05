@@ -1,7 +1,7 @@
 import { Fragment, useState, useEffect } from "react";
 
 // react-router components
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 // prop-types is a library for typechecking of props.
 import PropTypes from "prop-types";
@@ -39,6 +39,8 @@ function DefaultNavbar({
   relative,
   center,
 }) {
+  const location = useLocation();
+  console.log('location', location);
   const theme = useTheme();
 
   const [dropdown, setDropdown] = useState("");
@@ -58,6 +60,9 @@ function DefaultNavbar({
   const [searchInput2, setSearchInput2] = useState("");
   const [searchInput3, setSearchInput3] = useState("");
   const [searchInput4, setSearchInput4] = useState("");
+  const [searchInput5, setSearchInput5] = useState("");
+  const [searchInput6, setSearchInput6] = useState("");
+  const [searchInput7, setSearchInput7] = useState("");
 
   const openMobileNavbar = () => setMobileNavbar(!mobileNavbar);
   const ITEM_HEIGHT = 48;
@@ -585,6 +590,7 @@ function getStyles(theme) {
             InputLabelProps={{ shrink: true }}
             onChange={(event) => setSearchInput4(event.target.value)}
           />
+          
           <MKBox
             color="inherit"
             display={{ xs: "none", lg: "flex" }}
@@ -643,6 +649,39 @@ function getStyles(theme) {
             <Icon fontSize="default">{mobileNavbar ? "close" : "menu"}</Icon>
           </MKBox>
         </MKBox>
+        {location?.pathname === '/advanced-search' &&
+        <MKBox mr="20%" ml="18%">
+            <TextField
+              focused
+              size="small"
+              variant="outlined"
+              label="Search 4"
+              value={searchInput5}
+              InputLabelProps={{ shrink: true }}
+              onChange={(event) => setSearchInput5(event.target.value)}
+            />
+            <TextField
+              style={{ marginLeft: '10px' }}
+              focused
+              size="small"
+              variant="outlined"
+              label="Search 5"
+              value={searchInput6}
+              InputLabelProps={{ shrink: true }}
+              onChange={(event) => setSearchInput6(event.target.value)}
+            />
+            <TextField
+              style={{ marginLeft: '10px' }}
+              focused
+              size="small"
+              variant="outlined"
+              label="Search 7"
+              value={searchInput7}
+              InputLabelProps={{ shrink: true }}
+              onChange={(event) => setSearchInput7(event.target.value)}
+            />
+        </MKBox>
+        }
         <MKBox
           bgColor={transparent ? "white" : "transparent"}
           shadow={transparent ? "lg" : "none"}

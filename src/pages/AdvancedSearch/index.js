@@ -22,13 +22,8 @@ import footerRoutes from "footer.routes";
 // Images
 import bgImage from "assets/images/bg-health.webp";
 import DataTable from "pages/DataTable";
-import { useLocation } from "react-router-dom";
 
 function AdvancedSearch() {
-  const location = useLocation();
-  console.log('location', location);
-  
-
   const [showTable, setShowTable] = useState(false);
   return (
     <>
