@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 
 // @mui material components
 import MuiLink from "@mui/material/Link";
-import { Gauge } from '@mui/x-charts/Gauge';
 
 import MKBox from "components/MKBox";
 import MKButton from "components/MKButton";
@@ -45,9 +44,6 @@ function RotatingCard({ color, image, title, description, action }) {
         transform: "rotateY(180deg)",
       }}
     >
-        <div style={{ height: '60px', width: '100px'}}>
-          <Gauge width={100} height={100} value={description} valueMax={description + 100} />
-        </div>
         {action && (
           <MKBox width="50%" mt={4} mb={2} mx="auto">
             {action.type === "external" ? (

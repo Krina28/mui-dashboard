@@ -1,6 +1,5 @@
 import Icon from "@mui/material/Icon";
-import AboutUs from "layouts/pages/landing-pages/about-us";
-import ContactUs from "layouts/pages/landing-pages/contact-us";
+import AdvancedSearch from "layouts/pages/advanced";
 
 const routes = [
   {
@@ -9,18 +8,18 @@ const routes = [
     collapse: [
       {
         name: "advanced search",
-        route: "/",
-        component: <AboutUs />,
+        route: "/advanced-search",
+        component: <AdvancedSearch />,
       },
       {
         name: "about us",
         route: "/pages/landing-pages/about-us",
-        component: <AboutUs />,
+        component: <AdvancedSearch />,
       },
       {
         name: "contact us",
         route: "/pages/landing-pages/contact-us",
-        component: <ContactUs />,
+        component: <AdvancedSearch />,
       },
     ],
   }

@@ -29,8 +29,6 @@ import DefaultNavbarDropdown from "examples/Navbars/DefaultNavbar/DefaultNavbarD
 import DefaultNavbarMobile from "examples/Navbars/DefaultNavbar/DefaultNavbarMobile";
 
 import breakpoints from "assets/theme/base/breakpoints";
-import MKInput from "components/MKInput";
-import rgba from "assets/theme/functions/rgba";
 
 function DefaultNavbar({
   routes,
@@ -629,6 +627,9 @@ function getStyles(theme) {
                   {action.label}
                 </MKButton>
               ))}
+          </MKBox>
+          <MKBox ml={{ xs: "auto", lg: 1 }} mt={1}>
+            <Icon fontSize="default">{"login"}</Icon>
           </MKBox>
           <MKBox
             display={{ xs: "inline-block", lg: "none" }}

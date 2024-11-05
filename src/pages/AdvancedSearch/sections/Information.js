@@ -4,6 +4,7 @@ import Grid from "@mui/material/Grid";
 
 import MKBox from "components/MKBox";
 import RotatingCard from "examples/Cards/RotatingCard";
+import RotatingCardBack from "examples/Cards/RotatingCard/RotatingCardBack";
 import RotatingCardFront from "examples/Cards/RotatingCard/RotatingCardFront";
 
 function Information(updateShowTable) {
@@ -30,6 +31,7 @@ function Information(updateShowTable) {
                           title={cardVal.title}
                           description={cardVal.value}
                         />
+                        {/* <RotatingCardBack description={cardVal.value} /> */}
                       </RotatingCard>
                      </Grid>
                   )
