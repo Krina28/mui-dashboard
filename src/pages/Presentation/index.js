@@ -88,11 +88,11 @@ function Presentation() {
       >
         <Counters />
         <Information updateShowTable={() => setShowTable(!showTable)} />
+        {/* <Container sx={{ mt: 6, flex: 1 }}> */}
+            <Charts />
+        {/* </Container> */}
         {showTable && 
         <>
-          <Container sx={{ mt: 6, flex: 1 }}>
-            <Charts />
-          </Container>
           <DataTable />
         </>}
 

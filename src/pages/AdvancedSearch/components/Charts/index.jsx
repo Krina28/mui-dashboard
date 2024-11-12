@@ -26,7 +26,7 @@ export default function PieAnimation() {
                 width={600}
                 series={[
                   {
-                    data: mobileAndDesktopOS.slice(0, 6),
+                    data: mobileAndDesktopOS.slice(0, 4),
                     innerRadius: 100,
                     // arcLabel: (params) => params.label ?? "",
                     // arcLabelMinAngle: 20,
@@ -46,7 +46,7 @@ export default function PieAnimation() {
               <SparkLineChart
                 colors={["#1A73E8"]}
                 plotType="bar"
-                data={[1, 4, 2, 5, 7, 2, 4, 6]}
+                data={[10000, 8000, 1000, 1000]}
                 height={100}
                 showTooltip={true}
                 showHighlight={true}

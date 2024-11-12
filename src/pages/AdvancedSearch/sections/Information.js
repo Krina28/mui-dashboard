@@ -23,7 +23,7 @@ function Information(updateShowTable) {
               >
                 {cardData?.map((cardVal) => {
                   return (
-                    <Grid item xs={12} md={12} className="card-border" rowSpacing={2}>
+                    <Grid item xs={12} md={12} className="card-border" rowSpacing={2} tyle={{ marginRight: '20px' }}>
                       <RotatingCard>
                         <RotatingCardFront
                           icon="health_and_safety_icon"

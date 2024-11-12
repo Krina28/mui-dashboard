@@ -47,18 +47,16 @@ export const platforms = [
   },
 ];
 
-const normalize = (v, v2) => Number.parseFloat(((v * v2) / 100).toFixed(2));
-
 export const mobileAndDesktopOS = [
   ...chartData2.map((v) => ({
     ...v,
     label: v.label === "Other" ? "Other" : v.label,
-    value: normalize(v.value, platforms[0].value),
+    value: v.value,
   })),
   ...chartData.map((v) => ({
     ...v,
     label: v.label === "Other" ? "Other" : v.label,
-    value: normalize(v.value, platforms[1].value),
+    value: v.value,
   })),
 ];
 
