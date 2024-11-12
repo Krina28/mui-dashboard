@@ -1,49 +1,49 @@
 export const chartData = [
   {
     label: "Submitted",
-    value: 72.72,
+    value: 10000,
   },
   {
-    label: "Pending",
-    value: 16.38,
+    label: "Accepted",
+    value: 8000,
   },
   {
-    label: "Enrolled",
-    value: 3.83,
+    label: "Rejected",
+    value: 1000,
   },
   {
-    label: "Not Submitted",
-    value: 2.42,
-  },
-  {
-    label: "Processed",
-    value: 4.65,
+    label: "Errored",
+    value: 1000,
   },
 ];
 
 export const chartData2 = [
   {
-    label: "Processed",
-    value: 70.48,
+    label: "Submitted",
+    value: 10000,
   },
   {
-    label: "Enrolled",
-    value: 28.8,
+    label: "Accepted",
+    value: 8000,
   },
   {
-    label: "Pending",
-    value: 0.71,
+    label: "Rejected",
+    value: 1000,
+  },
+  {
+    label: "Errored",
+    value: 1000,
   },
 ];
 
 export const platforms = [
   {
-    label: "Enrolled",
-    value: 59.12,
+    label: "Accepted",
+    value: 8000,
   },
   {
-    label: "Pending",
-    value: 40.88,
+    label: "Rejected",
+    value: 1000,
   },
 ];
 

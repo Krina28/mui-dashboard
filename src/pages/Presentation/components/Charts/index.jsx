@@ -26,7 +26,7 @@ export default function PieAnimation() {
                 width={600}
                 series={[
                   {
-                    data: mobileAndDesktopOS.slice(0, 6),
+                    data: mobileAndDesktopOS.slice(0, 4),
                     innerRadius: 100,
                     // arcLabel: (params) => params.label ?? "",
                     // arcLabelMinAngle: 20,

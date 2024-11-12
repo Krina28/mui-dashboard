@@ -90,10 +90,10 @@ function AdvancedSearch() {
         <Information updateShowTable={() => setShowTable(!showTable)} />
         {showTable && 
         <>
-          <DataTable />
           <Container sx={{ mt: 6, flex: 1 }}>
             <Charts />
           </Container>
+          <DataTable />
         </>}
 
       </Card>

@@ -8,10 +8,10 @@ import RotatingCardFront from "examples/Cards/RotatingCard/RotatingCardFront";
 
 function Information(updateShowTable) {
   const cardData = [
-    { title: 'Submitted ENC', value: 34 },
-    { title: 'Accepted ENC', value: 17 },
-    { title: 'Rejected ENC', value: 3 },
-    { title: 'Errored ENC', value: 5 }
+    { title: 'Submitted Encounter', value: 10000 },
+    { title: 'Accepted Encounter', value: 8000 },
+    { title: 'Rejected Encounter', value: 1000 },
+    { title: 'Errored Encounter', value: 1000 }
   ]
 
   return (
